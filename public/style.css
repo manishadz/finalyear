@@ -1,0 +1,15 @@
+.carousel-item
+{
+    width: 100% !important;
+    height: 500px !important;
+    padding: 0px 80px;
+}
+.carousel-item img{
+    width: 100% !important;
+    height: 100% !important;
+}
+.registration{
+    background-color: black;
+    color: white;
+    padding: 2px 2px 2px;
+}
