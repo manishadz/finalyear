@@ -1,9 +1,8 @@
-@extends('master')
+@extends('layouts.backend')
 
 @section('content')
-<div class="body flex-grow-1 px-3">
+{{-- <div class="body flex-grow-1 px-3">
     <div class="container-lg">
-        this is a create produc
         <div class="card mb-4">
             <div class="card-header"><strong>Form control</strong><span class="small ms-1">Basic example</span></div>
             <div class="card-body">
@@ -34,5 +33,5 @@
             </div>
             </div>
     </div>
-  </div>
+  </div> --}}
 @endsection

@@ -1,48 +1,50 @@
 <?php
 
-
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\RegistrationController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// })
-
-Route::get('/login',[RegistrationController::class,'login'])->middleware('alreadyLoggedIn')->name('login');
-Route::get('/',[RegistrationController::class,'registration'])->middleware('alreadyLoggedIn')->name('registeration');
-Route::post('/register-user',[RegistrationController::class,'registerUser'])->name('register-user');
-Route::post('/login-user',[RegistrationController::class,'loginUser'])->name('login-user');
-Route::get('/logout',[RegistrationController::class,'logout']);
-
-Route::get('/dashboard',[RegistrationController::class,'dashboard'])->middleware('isLoggedIn');
-Route::get('/products/create',[ProductController::class,'create']);
-
-//add product routes
-Route::get('/addproduct',function(){
-    return view('addproduct');
-});
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\RegistrationController;
 
 //welcome page routes
-Route::get('/home',function(){
-    return view('home');
+Route::get('/',function(){
+    return view('homepage');
 });
 
-Route::get('/login',[RegistrationController::class,'login'])->middleware('alreadyLoggedIn');
-Route::get('/',[RegistrationController::class,'registration'])->middleware('alreadyLoggedIn');
-Route::post('/register-user',[RegistrationController::class,'registerUser'])->name('register-user');
-Route::post('/login-user',[RegistrationController::class,'loginUser'])->name('login-user');
-Route::get('/dashboard',[RegistrationController::class,'dashboard'])->middleware('isLoggedIn');
-Route::get('/logout',[RegistrationController::class,'logout']);
+// authentication routes
+// Route::get('/login',[RegistrationController::class,'login'])->name('login');
+// Route::get('/register',[RegistrationController::class,'registration'])->middleware('alreadyLoggedIn')->name('registeration');
+// Route::post('/register-user',[RegistrationController::class,'registerUser'])->name('register-user');
+// Route::post('/login-user',[RegistrationController::class,'loginUser'])->name('login-user');
+// Route::get('/logout',[RegistrationController::class,'logout']);
 
+
+
+
+// Route::get('/products/create',[ProductController::class,'create']);
+
+// //add product routes
+// Route::get('/addproduct',function(){
+//     return view('product-form');
+// });
+
+
+// Route::get('/category',function(){
+//     return view('category');
+// });
+
+
+
+Auth::routes();
+
+//backend's routes
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')->group(function(){
+    Route::get('/dashboard',[RegistrationController::class,'dashboard']);
+
+    Route::resource('/category', CategoryController::class);
+
+    Route::resource('products', ProductController::class);
+
+});

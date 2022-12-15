@@ -13,3 +13,13 @@
     color: white;
     padding: 2px 2px 2px;
 }
+.headline
+{
+    padding-left: 45% !important;
+}
+
+/* for card */
+.row-cols-1 {
+    padding: 0px 80px;
+}
+
