@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,14 +15,14 @@
 </head>
 
 <body>
-    @include('products.navbar')
+    @include('includes.navbar')
     <!-- search bar -->
-        @include('products.search')
+    @include('includes.search')
  <!---end search bar-->
 
 
     <!---slider--->
-    @include('products.slider')
+    @include('includes.slider')
     <!-- end slider--->
 
 <!----featured and card--->
@@ -32,7 +32,7 @@
         <h1>Featured</h1>
     </div>
 
-    @include('products.card')
+    @include('includes.card')
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -40,4 +40,12 @@
     </script>
 </body>
 
-</html>
+</html> --}}
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    @include('includes.slider')
+    @include('includes.card')
+</div>
+@endsection

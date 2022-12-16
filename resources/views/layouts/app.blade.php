@@ -28,9 +28,36 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Products
+                            </a>
 
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="">
+                                    {{ __('Car') }}
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    {{ __('Coin') }}
+                                </a>
+                            </div>
+                        </li>
+                        <!-- search -->
+
+                    </ul>
+
+                    <ul class="navbar-nav mr-auto ml-auto">
+                        <li class="nav-item justify-content-md-center">
+                            <form class="form-inline my-2 my-lg-0 my-lg-0">
+                                <input class="form-control mr-sm-2" type="text" placeholder="search" aria-label="Search" style="width: 600px;">
+
+                                {{-- <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button> --}}
+                            </form>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -49,6 +76,9 @@
                                 </li>
                             @endif
                         @else
+                        <li class="nav-item">
+                            <a href="{{ route('products.index') }}" class="nav-link">Product</a>
+                        </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
