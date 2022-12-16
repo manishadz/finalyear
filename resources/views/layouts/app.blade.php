@@ -77,7 +77,7 @@
                             @endif
                         @else
                         <li class="nav-item">
-                            <a href="{{ route('products.index') }}" class="nav-link">Product</a>
+                            <a href="{{ route('products.index') }}" class="nav-link">MYProduct</a>
                         </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -106,5 +106,20 @@
             @yield('content')
         </main>
     </div>
+
+
+    <!----alert message on edit add and delete the product--->
+    <script
+  src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    @if (session('success'))
+        <script>
+            toastr.success(" {{ session('success') }}")
+        </script>
+    @endif
 </body>
 </html>

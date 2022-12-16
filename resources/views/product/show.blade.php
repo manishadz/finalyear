@@ -40,7 +40,7 @@
             </div>
             <div class="col">
                 <label for="startDate">End-time</label>
-                <input id="startDate" class="form-control" type="date" />
+                <input id="end_time" class="form-control" type="date" />
             </div>
         </div>
         <br>

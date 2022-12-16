@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RegistrationController;
+
 
 //home page route
 Route::get('/',function(){
@@ -22,6 +22,8 @@ Route::middleware('auth')->group(function(){
 
     Route::resource('/category', CategoryController::class);
 
-    Route::resource('products', ProductController::class);
+    Route::resource('/products', ProductController::class);
+
+
 
 });
