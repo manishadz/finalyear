@@ -8,22 +8,18 @@ use App\Http\Controllers\HomeController;
 
 
 //home page route
-Route::get('/',function(){
-    return view('index');
-});
-
+Route::get('/',[HomeController::class,'index'])->name('index');
+Route::get('product-detail/{id}',[HomeController::class,'detail'])->name('product');
 
 // backend routes
 Auth::routes();
 
 Route::middleware('auth')->group(function(){
 
-    Route::get('/dashboard',[HomeController::class,'index']);
+    Route::get('/dashboard',[HomeController::class,'dashboard']);
 
     Route::resource('/category', CategoryController::class);
 
     Route::resource('/products', ProductController::class);
-
-
 
 });

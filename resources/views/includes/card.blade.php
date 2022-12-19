@@ -1,57 +1,26 @@
 <h2 class="mt-4 mb-2 mx-auto text-center">Featured Products</h2>
-<div class="row row-cols-1 row-cols-md-4 g-4">
+
+
+
+<div class="row row-cols-1 row-cols-md-4 g-4 h-100">
+    @foreach($products as $product)
     <div class="col">
       <div class="card">
-        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
-          alt="Hollywood Sign on The Hill" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
+
+         <div class="d-flex align-items-center justify-content-between p-2">
+            <h6>Ends in <span style="color: red">{{ $product->end_time }}</span class=""></h6>
+                <h6><span>{{ $product->category }}</span></h6>
+         </div>
+        <img class="img-thumbnail"  src="{{ asset('uploads/product/'.$product->image) }}" class="card-img-top"
+          alt="Hollywood Sign on The Hill" style="height: 200px;  object-fit:cover; object-position:center" />
+        <div class="card-body mx-auto">
+          <h5 class="card-title justify-content-between">{{ $product->name }}</h5>
+          <p class="card-text ">
+          <h5 class="justify-content-between" style="color: rgba(33, 252, 124, 0.918)">starts from NRS:50</h5>
           </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="{{ route('product', $product->id) }}" class="btn btn-primary d-grid gap-3">See Details</a>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card">
-        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
-          alt="Palm Springs Road" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"
-          alt="Los Angeles Skyscrapers" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-            additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
-          alt="Skyscrapers" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    @endforeach
+</div>

@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-    <h1>My Auctions <a href="{{ route('products.create') }}" class="btn btn-primary float-end   ">Add Product</a></h1>
+    <h1>My Products <a href="{{ route('products.create') }}" class="btn btn-primary float-end   ">Add Product</a></h1>
 <hr>
 
 

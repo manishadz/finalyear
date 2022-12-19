@@ -47,5 +47,6 @@
 <div class="container">
     @include('includes.slider')
     @include('includes.card')
+
 </div>
 @endsection

@@ -19,3 +19,9 @@ models
 2. Product 
 
 
+
+for bidding from detail page
+
+make migration: bidding_amount, user_id, product_id, 
+
+

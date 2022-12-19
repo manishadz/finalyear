@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,8 +22,24 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function dashboard()
+    {
+
+        return view('home');
+    }
+
+
     public function index()
     {
-        return view('home');
+
+        $products = Product::get();
+        return view('index', compact('products'));
+    }
+
+
+    public function detail($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('product_detail', compact('product'));
     }
 }
