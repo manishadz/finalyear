@@ -4,6 +4,7 @@
 @section('content')
 
 <div class="container">
+    this is dashboard
 
 </div>
 

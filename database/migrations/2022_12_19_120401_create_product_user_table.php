@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('biddings', function (Blueprint $table) {
+        Schema::create('product_user', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->float('bidding_amount');
+            $table->boolean('is_closed')->default(false);
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('biddings');
+        Schema::dropIfExists('product_user');
     }
 };

@@ -22,24 +22,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashboard()
+    public function index()
     {
-
         return view('home');
     }
 
-
-    public function index()
-    {
-
-        $products = Product::get();
-        return view('index', compact('products'));
-    }
-
-
-    public function detail($id)
-    {
-        $product = Product::findOrFail($id);
-        return view('product_detail', compact('product'));
-    }
 }
