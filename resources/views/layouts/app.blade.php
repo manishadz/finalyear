@@ -81,7 +81,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('mybid.index') }}" class="nav-link">MY Bid</a>
+                            <a href="{{ route('biddings.index') }}" class="nav-link">MY Bid</a>
                         </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

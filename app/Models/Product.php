@@ -16,6 +16,6 @@ class Product extends Model
      */
     public function users()
     {
-        return $this->belongsToMany(Product::class)->withPivot('bidding_amount', 'is_closed');
+        return $this->belongsToMany(User::class)->withPivot('bidding_amount', 'is_closed')->withTimestamps();
     }
 }

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bidding;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class BiddingController extends Controller
 {
@@ -14,7 +17,12 @@ class BiddingController extends Controller
      */
     public function index()
     {
-        return view('bidding.bidding');
+        // list bid
+        $user = auth()->user()->with('products')->first();
+        // dd($user['products']);
+        $biddings = $user['products'];//this give list of bidding of a user
+        return view('bidding.index', compact('biddings'));
+        dd($biddings);
     }
 
     /**
@@ -35,7 +43,17 @@ class BiddingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'product_id' => 'required',
+            'bidding_amount' => 'required',
+
+        ]);
+
+        $success = auth()->user()->products()->attach($data['product_id'],['bidding_amount'=>$data['bidding_amount']]);
+
+        session()->flash('success', 'Bidded successfully with Rs. '.$data['bidding_amount']);
+        return redirect()->back();
+
     }
 
     /**

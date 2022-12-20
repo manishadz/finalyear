@@ -48,6 +48,6 @@ class User extends Authenticatable
      */
     public function products()
     {
-        return $this->belongsToMany(User::class)->withPivot('bidding_amount', 'is_closed');
+        return $this->belongsToMany(Product::class)->withTimestamps()->withPivot('bidding_amount', 'is_closed');
     }
 }
