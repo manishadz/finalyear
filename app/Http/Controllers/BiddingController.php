@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bidding;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -18,11 +19,9 @@ class BiddingController extends Controller
     public function index()
     {
         // list bid
-        $user = auth()->user()->with('products')->first();
-        // dd($user['products']);
+        $user = User::with('products')->findOrFail(auth()->id());
         $biddings = $user['products']; //this give list of bidding of a user
         return view('bidding.index', compact('biddings'));
-        dd($biddings);
     }
 
     /**

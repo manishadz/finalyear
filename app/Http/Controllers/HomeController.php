@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products = Product::whereNot('user_id', auth()->id())->get();
+        return view('index', compact('products'));
     }
 
 }

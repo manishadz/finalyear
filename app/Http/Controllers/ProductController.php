@@ -14,7 +14,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::where('user_id',auth()->id())->get();
+        $products = Product::with(['users' => function($query){
+            $query->orderBy('bidding_amount', 'desc');
+        }])->where('user_id',auth()->id())->get();
+        // dd($products);
 
         return view('product.index', compact('products'));
 
