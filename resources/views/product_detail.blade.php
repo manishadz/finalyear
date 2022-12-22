@@ -35,9 +35,9 @@
                                     <h6 class="fw-bold ">Highest bid:
                                         <span class="p-5">
                                             @if ($product->users_count > 0)
-{{ $product->users[0]->pivot->bidding_amount }}
+                                                {{ $product->users[0]->pivot->bidding_amount }}
                                             @else
-{{ $product->min_price }}
+                                                {{ $product->min_price }}
                                             @endif
                                         </span>
                                     </h6>
@@ -53,7 +53,10 @@
                                                     @csrf
                                                     <label for="">Bid Amount</label><br>
                                                     <input type="number" class="form-control" name="bidding_amount"
-                                                        value="" min="{{ $product->min_price }}" max="{{ $product->max_price }}">
+                                                        value=""
+                                                        min="{{ $product->users_count > 0 ? $product->users[0]->pivot->bidding_amount : $product->min_price }}"
+
+                                                        max="{{ $product->max_price }}">
                                                     <input type="hidden" class="form-control" name="product_id"
                                                         value="{{ $product->id }}">
 

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col">
                 <label for="">Product Name</label><br>
-                <input type="text" class="form-control" value="{{ $product->id }}" name="name" placeholder="">
+                <input type="text" class="form-control" value="{{ $product->name}}" name="name" placeholder="">
             </div>
             <div class="col">
                 <label for="">Category</label><br>
@@ -47,7 +47,7 @@
         <br>
         <div class="mb-3">
             <label for="">Upload Image</label>
-            <input type="file" value=""  name="image" value=""
+            <input type="file"  name="image"
                 class="course form-control">
                 <br>
                 <img src="{{ asset('uploads/product/'.$product->image) }}" alt="" height="200px" width="200">

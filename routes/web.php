@@ -9,7 +9,7 @@ use App\Http\Controllers\BiddingController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontendController;
-
+use App\Http\Controllers\Notification;
 
 //home page route
 Route::get('/',[FrontendController::class,'index'])->name('index');
@@ -37,4 +37,7 @@ Route::middleware('auth')->group(function(){
     Route::resource('/biddings', BiddingController::class);
 
 });
+
+//notification
+Route::get('/send', [Notification::class,'sendNotification']);
 

@@ -101,8 +101,10 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
+
     {
         $product = product::find($id);
+        // dd($request->all());
 
         $product->name =$request->input('name');
         $product->category =$request->input('category');
@@ -116,8 +118,8 @@ class ProductController extends Controller
             $file = $request->file('image');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
-            $file->move('uploads/employee/', $filename);
-            $$product->image = $filename;
+            $file->move('uploads/product/', $filename);
+            $product->image = $filename;
         }
 
         $product->save();
