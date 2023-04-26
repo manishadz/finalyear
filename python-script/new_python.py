@@ -9,8 +9,8 @@ app = Flask(__name__)
 @app.route('/myapi')
 def myapi():
     # Load your data into a Pandas DataFrame
-    data = pd.read_csv('/home/bhairab/Downloads/PythonProj/finalyear/python-script/Apple.csv')
-    
+    data = pd.read_csv('/media/mundre/Backup/finalyear/python-script/Apple.csv')
+
     le = LabelEncoder()
     data['Model'] = le.fit_transform(data['Model'])
 

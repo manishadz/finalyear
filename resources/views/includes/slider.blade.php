@@ -9,10 +9,10 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/coins.jpg" class="d-block w-100" alt="...">
+            <img src="images/Nokia.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Old Nepali Coin</h5>
-                <p>This Coin was one of the oldest coin of nepal.</p>
+                <h5>Nokia </h5>
+                <p>This is Nokia .</p>
             </div>
         </div>
         <div class="carousel-item">
