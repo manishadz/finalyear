@@ -36,7 +36,7 @@
             </div>
             <div class="col">
                 <label for="">Max-price</label><br>
-                <input type="number" class="form-control" name="max_price" placeholder="">
+                <input id="max_price" type="number" class="form-control" name="max_price" value="{{isset($data['x']) ? $data['x'] : '' }}" placeholder="">
             </div>
             <div class="col">
                 <label for="">End-time</label>
@@ -57,5 +57,38 @@
 
     </form>
 </div>
+
+<!-- <script>
+    var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+    };
+
+    fetch("http://localhost:8080/category-wise-news", requestOptions)
+      .then(response => response.text())
+      .then(result => {
+        let data = result.main_key;
+        if (data.length > -1) {
+            //element ko id bata value inject garney mathe 
+            // data.x 
+            const max_price = document.getElementById("max_price");
+            max_price.value = data.x; // 10.5
+
+        }
+        console.log(data);
+      })
+      .catch(error => console.log('error', error));
+
+      // using jquery 
+      var settings = {
+        "url": "{{url}}/category-wise-news",
+        "method": "GET",
+        "timeout": 0,
+      };
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+</script> -->
 
 @endsection

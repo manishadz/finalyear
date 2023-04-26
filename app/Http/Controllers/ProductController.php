@@ -30,6 +30,44 @@ class ProductController extends Controller
      */
     public function create()
     {
+        /**
+         * Curl use gar 
+         */
+
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => '%7B%7Burl%7D%7D/category-wise-news',
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => '',
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => 'GET',
+        // ));
+        
+        // $response = curl_exec($curl);
+        
+        // curl_close($curl);
+        //$response = json_decode($response);
+
+        /**
+         * eg : 
+         * $response = main_key => [
+         * 'x'=> 12.56,
+         * 'y' => 1542.l
+         * 'z' => [{xyz : 1},{abc : 1}]
+         * ]
+         * 
+         */
+        // return view('product.create')->with(['data' => $response]);
+
+        /**
+         * in blade view : 
+         * {{$data['x']}} ==> 12.56
+         * {{$data['z']}} ==> [{xyz : 1},{abc : 1}]
+         */
         return view('product.create');
     }
 
