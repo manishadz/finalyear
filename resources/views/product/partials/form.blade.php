@@ -48,8 +48,8 @@
 
 <div class="row">
     <div class="col">
-        <label for="">Minimum Price</label><br>
-        <input type="number" class="form-control" name="min_price" placeholder="Minimum Price" value="{{ $product->min_price ?? old('min_price')}}" required>
+        <label for="">Mini-Price</label><br>
+        <input type="number" class="form-control" name="min_price" value="{{isset($data->predicted_price) ? (int)$data->predicted_price : 1}}" placeholder="">
     </div>
 
     <div class="col">
