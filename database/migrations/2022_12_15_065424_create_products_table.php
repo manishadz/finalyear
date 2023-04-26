@@ -16,15 +16,18 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('category');
-            $table->string('image')->nullable();
+            $table->string('company');
+            $table->string('model');
             $table->text('description');
+            $table->string('condition');
+            $table->integer('age');
             $table->bigInteger('min_price');
             $table->bigInteger('max_price');
             $table->timestamp('end_time')->date_format('l jS \of F Y h:i:s a');
             $table->boolean('is_active')->default(true);
-            $table->timestamps();
+            $table->string('image')->nullable();
             $table->foreignId('user_id')->constrained();
+            $table->timestamps();
         });
     }
 

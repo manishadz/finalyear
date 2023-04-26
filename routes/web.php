@@ -33,7 +33,6 @@ Route::middleware('auth')->group(function(){
 
     Route::resource('/products', ProductController::class);
 
-
     Route::resource('/biddings', BiddingController::class);
 
 });

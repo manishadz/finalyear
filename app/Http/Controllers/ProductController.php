@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Product\StoreRequest;
+use App\Http\Requests\Product\UpdateRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -14,13 +16,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with(['users' => function($query){
+        $products = Product::with(['users' => function ($query) {
             $query->orderBy('bidding_amount', 'desc');
-        }])->where('user_id',auth()->id())->get();
+        }])->where('user_id', auth()->id())->get();
         // dd($products);
 
         return view('product.index', compact('products'));
-
     }
 
     /**
@@ -39,33 +40,26 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        $product =new Product();
-        //  dd($request);
-        $product->name =$request->input('name');
-        $product->category =$request->input('category');
-        $product->description =$request->input('description');
-        $product->min_price =$request->input('min_price');
-        $product->max_price =$request->input('max_price');
-        $product->end_time =$request->input('end_time');
-        $product->user_id = auth()->id();
+        $validated = $request->validated();
+        $validated['user_id'] = auth()->id();
 
-        if($request->hasfile('image'))
-        {
+        if ($request->hasfile('image')) {
             $file = $request->file('image');
             $extenstion = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extenstion;
+            $filename = time() . '.' . $extenstion;
             $file->move('uploads/product/', $filename);
-            $product->image = $filename;
-        }
-        else{
-            return $request;
-            $product->image = '';
+            $validated['image'] = $filename;
         }
 
-        $product->save();
-        session()->flash('success', 'Product added successfully');
+        $success = Product::create($validated);
+        if ($success) {
+            session()->flash('success', 'new product added successfully');
+        } else {
+            session()->flash('error', 'something went wrong.');
+        }
+
         return redirect()->route('products.index');
     }
 
@@ -78,7 +72,6 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-
     }
     /**
      * Show the form for editing the specified resource.
@@ -89,8 +82,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::findorFail($id);
-        return view('product.edit',compact('product'));
-
+        return view('product.edit', compact('product'));
     }
 
     /**
@@ -100,30 +92,28 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
 
     {
-        $product = product::find($id);
-        // dd($request->all());
+        $product = product::findOrFail($id);
 
-        $product->name =$request->input('name');
-        $product->category =$request->input('category');
-        $product->description =$request->input('description');
-        $product->min_price =$request->input('min_price');
-        $product->max_price =$request->input('max_price');
-        $product->end_time =$request->input('end_time');
+        $validated = $request->validated();
 
-        if($request->hasfile('image'))
-        {
+        if ($request->hasfile('image')) {
             $file = $request->file('image');
             $extenstion = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extenstion;
+            $filename = time() . '.' . $extenstion;
             $file->move('uploads/product/', $filename);
-            $product->image = $filename;
+            $validated['image'] = $filename;
         }
 
-        $product->save();
-        session()->flash('success', 'Product edited successfully');
+        $success = $product->update($validated);
+        if ($success) {
+            session()->flash('success', 'product information updated successfully');
+        } else {
+            session()->flash('error', 'something went wrong.');
+        }
+
         return redirect()->route('products.index');
     }
 
@@ -136,12 +126,14 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
-        $product->delete();
-        session()->flash('success', 'Product Deleted successfully');
+        $success = $product->delete();
+
+        if ($success) {
+            session()->flash('success', 'product deleted successfully');
+        } else {
+            session()->flash('error', 'something went wrong.');
+        }
+
         return redirect()->route('products.index');
-      }
-
-
     }
-
-
+}

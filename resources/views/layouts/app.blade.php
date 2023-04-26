@@ -38,7 +38,6 @@
             width: 500px !important;
 
         }
-
     </style>
 </head>
 
@@ -152,9 +151,7 @@
 
                                 <ul class="dropdown-menu notification-dropdown" aria-labelledby="dropdownMenuButton1">
                                     @if ($totalNotification > 0)
-                                        @foreach ( auth()
-                                        ->user()
-                                        ->unreadNotifications as $key => $notification)
+                                        @foreach (auth()->user()->unreadNotifications as $key => $notification)
                                             <li>
                                                 {{ @$notification->data['order_id'] }}
                                             </li>
@@ -178,11 +175,9 @@
             @yield('content')
         </main>
     </div>
-
-
+    
     <!----alert message on edit add and delete the product--->
-    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
-        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -193,7 +188,7 @@
         </script>
     @endif
 
-
+    @stack('scripts')
 </body>
 
 </html>
