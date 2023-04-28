@@ -1,0 +1,275 @@
+// Small tablets and large smartphones (landscape view)
+$mobile: 576px;
+
+// Small tablets (portrait view)
+$tablet: 768px;
+
+// Tablets and small desktops
+$mac: 992px;
+
+// Large tablets and desktops
+$laptop: 1200px;
+
+// Extra large devices
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+// Large devices
+@mixin mac {
+  @media (max-width: #{$mac}) {
+    @content;
+  }
+}
+// Medium devices
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// responsive css
+
+@include laptop {
+  .container-fluid {
+    max-width: 90%;
+  }
+}
+@include mac {
+ .primary-title{
+  margin-bottom: 30px;
+ }
+ .hotel-content .content-wrapper .room-list li label .tag{
+  font-size: 13px;
+}
+.hotel-content .content-wrapper .customer-review .overall-review{
+  padding: 10px 0;
+  border: 0;
+}
+.hotel-content .content-wrapper .customer-review .filter-wrapper p {
+  margin-bottom: 10px;
+}
+header .vendor-contact-info{
+  display: none;
+}
+.slick-next{
+  right: -8px !important;
+}
+.slick-prev{
+  left: -8px !important;
+}
+.vendor-login-btn{
+  display: block;
+}
+
+
+}
+@include tablet {
+  .top-header,header nav {
+    display: none;
+  }
+
+  .mobile-top-header,
+  .mobile-bottom-tab ,.mobile-bottom-detail-tab{
+    display: block;
+    border-bottom: 1px solid #ddd;
+  }
+  #scroll-to-top-button {
+    height: 45px;
+    width: 45px;
+    bottom: 75px;
+    right: 25px;
+    i {
+      font-size: 20px;
+    }
+  }
+  .vendor-top-footer{
+    margin-bottom: 20px;
+  }
+
+  footer .bottom-footer{
+    padding-bottom: 20px;
+  }
+  .bottom-footer{
+   margin-bottom: 64px;
+  }
+  .sticky-top{
+    position: static;
+
+  }
+  section.subscription-suggest{
+    .subs-info{
+ 
+      flex-direction: column;
+      align-items: flex-start;
+      .border-side{
+        border: 0;
+      }
+    
+  }
+
+  } 
+  .hotel-detail-nav ul.link-list{
+    overflow-x: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  .hotel-content .booking-form {
+    border: 0;
+    
+  }
+  .hotel-list ul .hotel-list-view .additional-box .additional-info .price{
+    margin-top: 0;
+  }
+  .hotel-list ul .hotel-list-view .hotel-info .facilities-item{
+    display: none;
+  }
+  .hotel-list ul .hotel-list-view .hotel-image-box img {
+    height: 117px;
+  }
+  .hotel-list ul .hotel-list-view .hotel-info .name{
+    font-size: 20px;
+  }
+  .hotel-list ul .hotel-list-view .additional-box .additional-info::after{
+    background-color: transparent;
+  }
+  .hotel-list ul .hotel-list-view .additional-box .additional-info .price h3{
+    font-size: 18px;
+  }
+  .search-page .filter-wrapper{
+    border-color: transparent;
+  }
+  .cus-slick-slider .slick-arrow{
+    width: 43px;
+    height: 42px;
+  }
+  .slick-next:before, .slick-prev:before{
+    font-size: 18px !important;
+  }
+  section.vendor-hero .hero-content .title{
+    font-size: 42px;
+  }
+  section.vendor-hero .hero-content{
+    padding-right: 0;
+  }
+  section.vendor-hero .hero-content .description{
+    font-size: 18px;
+  }
+  .auth-suggestion{
+    text-align: center;
+  }
+  section.hotel-images .slider-single .hotel-image-wrapper{
+    height: 280px;
+  }
+  section.hotel-images .slider-nav .hotel-image-wrapper.slick-active::after{
+    height: 80%;
+  }
+  section.hotel-images .slider-nav .hotel-image-wrapper img{
+    height: 80%;
+  }
+  .hotel-search-modal{
+    padding: 20px;
+  }
+
+}
+@include mobile {
+  .primary-title{
+    font-size: 28px;
+    text-align: center;
+  }
+  section.hot-offers{
+    padding: 40px 0;
+  }
+  section.top-destination, section.guest-houses, section.blogs, section.cus-faqs{
+    padding: 40px 0;
+  }
+  .brand-logo{
+    font-size: 28px;
+  }
+  section.hero .hero-title {
+    font-size: 32px;
+  }
+  section.hero .hero-title span{
+    font-size: 28px;
+  }
+  #scroll-to-top-button {
+    height: 40px;
+    width: 40px;
+    bottom: 75px;
+    right: 25px;
+    i {
+      font-size: 18px;
+    }
+  }
+ 
+
+  .hotel-detail-nav  .col-4{
+    display: none;
+  }
+  .hotel-content .content-wrapper .room-list li label .tag{
+    font-size: 16px;
+  }
+  .hotel-list ul .hotel-list-view .additional-info{
+    flex-direction: row;
+    padding: 0 10px;
+  }
+  .hotel-list ul .hotel-list-view .additional-box .additional-info{
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .hotel-list ul .hotel-list-view .additional-info .price{
+    margin-top: 0;
+  }
+  .hotel-list ul .hotel-list-view .additional-info::after{
+    background-color: transparent;
+  }
+  .billing-page .billing-info{
+    padding: 10px;
+  }
+  .auth-form{
+    padding: 10px;
+  }
+  .default-heading h2{
+    font-size: 28px;
+  }
+  .modal .modal-close{
+    width: 35px;
+    height: 35px;
+    right: -2px;
+    top: -8px;
+  }
+  section.login-page{
+    padding: 20px 0;
+  }
+  .vendor-clients{
+    text-align: center;
+  }
+  .hotel-content .content-wrapper .customer-review .seperate-review .service{
+    display: block;
+  }
+  .hotel-content .content-wrapper .customer-review .guest-review-wrapper .guest-review-text{
+    display: inline-block;
+  }
+  .hotel-search-modal{
+    padding: 10px;
+  }
+  .cus-slick-slider .slick-arrow{
+    width: 36px;
+    height: 35px;
+  }
+  .slick-next:before, .slick-prev:before{
+    font-size: 15px !important;
+  }
+
+
+}

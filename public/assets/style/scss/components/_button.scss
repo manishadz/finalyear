@@ -1,0 +1,264 @@
+.large-btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  font-weight: $fw-medium;
+  font-size: $description-font;
+  border: 1px solid$red-color;
+  background-color: $red-color;
+  color: white;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  width: 100%;
+  &:hover {
+    background-color: $dark-red-color;
+    border: 1px solid $dark-red-color;
+  }
+}
+
+.primary-button {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $red-color;
+  color: white;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  border: 1px solid$red-color;
+  &:hover {
+    border-color: $dark-red-color;
+    background-color: $dark-red-color;
+  }
+}
+.primary-outline-button {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: $red-color;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  border: 1px solid$red-color;
+  &:hover {
+    background-color: $dark-red-color;
+    color: white;
+    border-color: $dark-red-color;
+  }
+}
+.danger-button {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $red-color;
+  color: white;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  border: 0;
+  text-decoration: none;
+  &:hover {
+    background-color: $deep-blue;
+  }
+}
+.warning-button {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $yellow-color;
+  color: white;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  border: 0;
+  text-decoration: none;
+  &:hover {
+    background-color: $deep-blue;
+  }
+}
+
+// view all button
+.view-all-btn {
+  text-decoration: none;
+  color: $red-color;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  &:hover {
+    color: $dark-red-color;
+  }
+}
+
+// pills-button
+.sm-pill-button {
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  background-color: white;
+  &.primary {
+    border: 2px solid$red-color;
+    color: $red-color;
+    &:hover {
+      background-color: $red-color;
+      color: white;
+    }
+  }
+}
+
+.pill-button {
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  background-color: white;
+  &.primary {
+    border: 2px solid$red-color;
+    color: $red-color;
+    &:hover {
+      background-color: $red-color;
+      color: white;
+    }
+  }
+}
+
+// scroll-to-top-button
+#scroll-to-top-button {
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 70px;
+  right: 70px;
+  z-index: 9999;
+  border-radius: 50%;
+  border: 0;
+  i {
+    color: $dark-50-color;
+    font-size: 25px;
+  }
+  &:hover {
+    i {
+      color: $red-color;
+    }
+  }
+}
+
+// square button
+.square-btn--red {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $red-color;
+  color: white;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  border: 1px solid$red-color;
+  &:hover {
+    border-color: $dark-red-color;
+    background-color: $dark-red-color;
+  }
+}
+.square-btn--blue {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $deep-blue;
+  color: white;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  border: 1px solid$red-color;
+  &:hover {
+    border-color: $deep-blue;
+    background-color: $deep-blue;
+  }
+}
+.square-outline-btn--blue {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  color:  $deep-blue;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  border: $light-blue-border;
+  i{
+    font-size: 25px;
+  }
+  &:hover {
+    border-color: $deep-blue;
+    background-color: $deep-blue;
+    color: white;
+  }
+}
+.square-outline-btn--red {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  color:  $red-color;
+  font-size: $description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  border: $light-red-border;
+  i{
+    font-size: 25px;
+  }
+  &:hover {
+    border-color: $red-color;
+    background-color: $red-color;
+    color: white;
+  }
+}
+.vendor-login-btn{
+  display: none;
+}
+.primary-sm-button {
+  height: 35px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $red-color;
+  color: white;
+  font-size: $sm-description-font;
+  font-weight: $fw-medium;
+  border-radius: $web-border-radius;
+  text-decoration: none;
+  border: 1px solid$red-color;
+  &:hover {
+    border-color: $dark-red-color;
+    background-color: $dark-red-color;
+  }
+}
+

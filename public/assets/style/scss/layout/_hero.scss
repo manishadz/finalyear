@@ -1,0 +1,95 @@
+section.hero {
+  padding: 50px 0 0 0;
+  margin-bottom: 20px;
+  background-color: rgb(241, 241, 241);
+  background-image: url(https://www.samhi.co.in/GIF/Hero-Header-Banner/hyatt-place-gurgaon.jpg);
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 46, 80, 0.8);
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .hero-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-weight: $fw-bold;
+    margin-bottom: 20px;
+    span {
+      color: $white-color;
+      font-size: 40px;
+    }
+  }
+  .hero-description {
+    position: relative;
+    z-index: 2;
+    font-size: $description-font;
+    line-height: 24px;
+    color: white;
+    font-weight: $fw-regular;
+  }
+
+  .site-counterup {
+    background-color: white;
+    border-radius: $web-border-radius;
+    padding: 30px;
+    h3 {
+      font-size: $md-title-font;
+      line-height: 31px;
+      font-weight: $fw-bold;
+      color: $dark-color;
+    }
+    .counter-wrapper {
+      background-color: $red-color;
+      text-align: center;
+      color: white;
+      border-radius: $web-border-radius;
+      padding: 10px;
+      margin-bottom: 15px;
+      i {
+        font-size: 40px;
+      }
+      h4 {
+        font-weight: $fw-bold;
+        color: $white-color;
+        font-size: $md-title-font;
+        line-height: 31px;
+        margin: 5px 0;
+      }
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    h4 {
+      font-weight: $fw-medium;
+      font-size: $md-title-font;
+      line-height: 31px;
+      color: $dark-color;
+    }
+    .reg-suggest-info {
+      padding-top: 15px;
+      border-top: $light-dark-border;
+      h4 {
+        font-weight: $fw-medium;
+        font-size: $description-font;
+        line-height: 24px;
+        color: $dark-color;
+        margin-bottom: 5px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}

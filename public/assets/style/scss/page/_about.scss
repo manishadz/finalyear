@@ -1,0 +1,98 @@
+section.about-company {
+  padding: 50px 0;
+  .company-goals-content {
+    background-color: white;
+    border-radius: $web-border-radius;
+    .company-goal {
+      img {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: $sm-title-font;
+        font-weight: $fw-bold;
+        color: $dark-color;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: $description-font;
+        line-height: 24px;
+        font-weight: $fw-regular;
+        color: $dark-color;
+      }
+    }
+  }
+}
+.about-image {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  border-radius: $web-border-radius;
+  .about-image__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+section.our-services,
+section.our-teams {
+  padding-bottom: 50px;
+}
+
+section.testimonials {
+  background-color: $light-white-color;
+  padding: 40px 0;
+  .testimonial-slider {
+    .testimonial-comment {
+      p {
+        font-size: $description-font;
+        line-height: 24px;
+        color: $dark-color;
+        font-weight: $fw-regular;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 162px;
+      }
+    }
+    .testimonial-info {
+      .profile-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+          margin-bottom: 10px;
+        }
+      }
+      .name {
+        font-size: $description-font;
+        line-height: 24px;
+        font-weight: $fw-medium;
+        color: $dark-color;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-height: 1.4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0px;
+      }
+      .description {
+        font-size: $sm-description-font;
+        line-height: 21px;
+        color: $red-color;
+        font-weight: $fw-regular;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

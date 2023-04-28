@@ -1,0 +1,30 @@
+.error-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    &-content{
+             text-align: center;
+        .image-box{
+            height: 300px;
+            margin-bottom:20px ;
+            img{
+                height: 100%;
+            }
+        }
+        .error-content{
+    
+            .title{
+                font-size: $title-font;
+                margin-bottom: 15px;
+                font-weight: $fw-medium;
+            }
+            .description{
+                font-size: $description-font;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+}

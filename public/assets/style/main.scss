@@ -1,0 +1,53 @@
+@import "./scss/abstracts/variable";
+@import "./scss/abstracts/mixin";
+@import "./scss/base/typography";
+@import "../style/scss/components/input-field";
+@import "../style/scss/components/button";
+@import "../style/scss/components/card";
+@import "../style/scss/components/top-filter-result";
+@import "../style/scss/components/pagination";
+@import "../style/scss/components/success-modal";
+@import "../style/scss/components/list";
+@import "../style/scss/components/slick-slider";
+@import "../style/scss/components/breadcrumb";
+@import "../style/scss/components//accordion";
+@import "../style/scss/components/modal";
+@import "../style/scss/components/dropdown";
+@import "../style/scss/components/search-banner";
+@import "./scss/layout/header";
+@import "./scss/layout/hero";
+@import "./scss/layout/main-tab";
+@import "./scss/layout/moble-nav";
+@import "../style/scss/page/home";
+@import "../style/scss/page/hotel-detail";
+@import "../style/scss/page/search-page";
+@import "../style/scss/layout/footer";
+@import "./scss/page/auth";
+@import "./scss/page/favorite";
+@import "./scss/page/contact";
+@import "./scss/page/billing";
+@import "./scss/page/about";
+@import "./scss/page/vendor";
+@import "./scss/page/services";
+@import "./scss/page/error";
+@import "./scss/page/customer-booking";
+@import "./scss/page/account-settting";
+@import "./scss/page/customer-change-password";
+@import "./scss/breakpoint/responsive";
+
+html,
+body {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.light-bg {
+  background-color: $white-color;
+}
+
+.row.gap .col-3,
+.row.gap .col-xxl-3,
+.row.gap .col-xl-3 {
+  padding: 0 10px;
+}

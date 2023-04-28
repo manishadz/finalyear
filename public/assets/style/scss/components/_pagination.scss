@@ -1,0 +1,49 @@
+.cus-pagination-wrapper {
+  margin-top: 15px;
+  border-top: $light-dark-border;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    font-size: $description-font;
+    line-height: 24px;
+    font-weight: $fw-regular;
+    color: $dark-color;
+    margin-bottom: 0;
+  }
+  .pagination {
+    margin: 0;
+    .page-item:first-child,
+    .border-bottom-left-radius {
+      .page-link {
+        border-top-left-radius: $web-border-radius;
+        border-bottom-left-radius: $web-border-radius;
+      }
+    }
+    .page-item {
+      .page-link {
+        height: 30px;
+        width: 30px;
+        border-radius: $web-border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: $light-dark-border;
+        color: $dark-color;
+        font-size: $description-font;
+        line-height: 24px;
+        font-weight: $fw-medium;
+        margin: 0 2px;
+        box-shadow: none;
+        padding: 0;
+        &:hover,
+        &.active {
+          color: white;
+          background-color: $red-color;
+          border: 1px solid$red-color;
+        }
+      }
+    }
+  }
+}

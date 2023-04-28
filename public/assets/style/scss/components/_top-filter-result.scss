@@ -1,0 +1,37 @@
+.top-filter-result {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 0;
+  h3 {
+    font-size: $sm-title-font;
+    font-weight: $fw-bold;
+    margin-bottom: 0;
+    span {
+      font-size: $description-font;
+      line-height: 24px;
+      font-weight: $fw-regular;
+    }
+  }
+  p {
+    font-size: $description-font;
+    line-height: 24px;
+    font-weight: $fw-regular;
+    margin-bottom: 0;
+    color: $dark-50-color;
+    span {
+      color: $dark-color;
+    }
+  }
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    .form-select {
+      width: 150px;
+      margin-left: 10px;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+}

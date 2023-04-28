@@ -1,0 +1,196 @@
+.input-wrapper {
+  position: relative;
+  .bordered-bottom.form-control {
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid $dark-color;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: $fw-regular;
+    font-size: $description-font;
+    line-height: 24px;
+    padding: 5px 0 5px 25px;
+    &:focus {
+      border-color: $red-color;
+    }
+  }
+  i {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    font-weight: 300;
+    color: $dark-color;
+  }
+  &.solid {
+    label {
+      font-size: $sm-description-font;
+      line-height: 21px;
+      color: $dark-color;
+      font-weight: $fw-regular;
+      margin-bottom: 5px;
+      &.lg {
+        font-size: 16px;
+        a {
+          color: $red-color;
+          font-weight: $fw-medium;
+        }
+      }
+    }
+    i {
+      left: 15px;
+      top: 25%;
+      font-size: 16px;
+    }
+    .form-control {
+      padding: 0 10px 0 40px;
+    }
+  }
+  .form-control {
+    min-height: 50px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
+    border-radius: $web-border-radius;
+    box-shadow: none;
+    border: 1px solid $dark-color;
+    font-weight: $fw-regular;
+    font-size: $description-font;
+    line-height: 24px;
+    &:focus {
+      border-color: $red-color;
+    }
+    &.is-invalid {
+      border-color: $red-color;
+      box-shadow: none;
+    }
+  }
+  .sm-form-control {
+    min-height: 35px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $web-border-radius;
+    box-shadow: none;
+    border: 1px solid $dark-color;
+    font-weight: $fw-regular;
+    font-size: $description-font;
+    line-height: 24px;
+    &:focus {
+      border-color: $red-color;
+    }
+  }
+  textarea.form-control {
+    height: 100px;
+  }
+  input[type="checkbox"] {
+    flex-shrink: 0;
+    border-radius: $web-border-radius;
+    border: 1px solid $dark-color;
+    box-shadow: none;
+    margin-top: 0;
+    &:checked {
+      border-color: $red-color;
+      background-color: $red-color;
+    }
+  }
+  input[type="radio"] {
+    flex-shrink: 0;
+    border: 1px solid $dark-color;
+    box-shadow: none;
+    margin-top: 0;
+    &:checked {
+      border-color: $red-color;
+      background-color: $red-color;
+    }
+  }
+}
+
+.error-message {
+  font-size: $sm-description-font !important;
+  color: $red-color !important;
+  font-weight: $fw-regular !important;
+}
+// price ranges
+
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 30px 0 35px;
+}
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  align-items: center;
+}
+.field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 14px;
+  margin-left: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #999;
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.price-input .separator {
+  width: 80px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  height: 5px;
+  position: relative;
+  background: #eee;
+  border-radius: 5px;
+}
+.slider .progress {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background: $red-color;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: $red-color;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: $red-color;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}

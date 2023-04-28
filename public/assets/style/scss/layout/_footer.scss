@@ -1,0 +1,116 @@
+footer {
+  background-color: $deep-blue;
+  padding-top: 67px;
+  .top-footer {
+    padding-bottom: 20px;
+
+    .title {
+      font-weight: $fw-medium;
+      font-size: $md-title-font;
+      color: white;
+      margin-bottom: 20px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: $fw-regular;
+          font-size: $description-font;
+          line-height: 24px;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      p {
+        font-size: $sm-description-font;
+        line-height: 21px;
+        color: white;
+        margin-bottom: 5px;
+      }
+      h6 {
+        font-size: $description-font;
+        line-height: 24px;
+        color: $yellow-color;
+        margin-bottom: 0;
+        font-weight: $fw-regular;
+        span {
+          font-weight: $fw-medium;
+        }
+      }
+    }
+    .address,
+    .social-media {
+      h5 {
+        font-size: 16px;
+        font-weight: $fw-regular;
+        text-transform: uppercase;
+        color: white;
+      }
+      p {
+        font-size: $sm-description-font;
+        line-height: 21px;
+        color: $yellow-color;
+        font-weight: $fw-regular;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        li {
+          a {
+            height: 35px;
+            width: 35px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-right: 10px;
+            color: $dark-color;
+            &:hover {
+              background-color: $red-color;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom-footer {
+    position: sticky;
+    top: 0;
+    border-top: $light-white-border;
+    padding-top: 20px;
+    h3 {
+      font-size: 32px;
+      color: white;
+      font-weight: 900;
+    }
+    p {
+      font-size: $sm-description-font;
+      line-height: 21px;
+      font-weight: $fw-light;
+      color: white;
+    }
+    img {
+      height: 40px;
+    }
+  }
+}

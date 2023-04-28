@@ -1,0 +1,59 @@
+.confirm-modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  border-radius: $web-border-radius;
+  background-color: white;
+  text-align: center;
+  box-shadow: $box-shadow;
+  padding: 30px;
+  z-index: 9999;
+  &.error {
+    .icon-wrapper {
+      border: 1px solid $red-color;
+      i {
+        color: $red-color;
+      }
+    }
+  }
+  &.success {
+    .icon-wrapper {
+      border: 2px solid green;
+      i {
+        color: green;
+      }
+    }
+  }
+  .icon-wrapper {
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: $sm-title-font;
+    font-weight: $fw-medium;
+    color: $dark-color;
+  }
+  p {
+    font-size: $sm-description-font;
+    color: $dark-50-color;
+    font-weight: $fw-regular;
+  }
+  .action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      margin: 0 5px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.cus-slick-slider {
+  .slick-track {
+    margin: 0%;
+  }
+  .slick-arrow {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #f1f1f1 !important;
+    border: 2px solid white;
+    opacity: 1;
+    z-index: 2;
+    &.slick-next:before {
+      color: $dark-color;
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+    &.slick-prev:before {
+      color: $dark-color;
+      content: "\f053";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+    &:hover,
+    &:visited {
+      &::after,
+      &::before {
+        color: $red-color;
+      }
+    }
+    &.slick-disabled {
+      opacity: 0;
+    }
+  }
+  .slick-dots {
+    bottom: -40px;
+    li {
+      button {
+        background-color: $dark-50-color;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+    }
+    li.slick-active {
+      button {
+        background-color: $red-color;
+      }
+    }
+  }
+  .gap {
+    margin: 0 10px;
+  }
+}
+
+.image-preview-modal {
+  .slick-prev {
+    left: 25px;
+  }
+  .slick-next {
+    right: 25px;
+  }
+  .single-slider {
+    background-color: $dark-color;
+    .image-wrapper {
+      height: 75vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: auto;
+        max-height: 75vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .hotel-info {
+    background-color: rgba(2555, 255, 255, 0.85);
+    border-radius: $web-border-radius;
+    padding: 20px;
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .address {
+      font-size: $sm-description-font;
+      line-height: 21px;
+      font-weight: $fw-regular;
+      color: $dark-color;
+      margin-bottom: 20px;
+    }
+    .hotel-name {
+      font-size: $md-title-font;
+      line-height: 31px;
+      font-weight: $fw-bold;
+      color: $dark-color;
+      margin-bottom: 0px;
+    }
+    .price {
+      margin: 15px 0;
+      h3 {
+        font-weight: $fw-bold;
+        font-size: $md-title-font;
+        line-height: 31px;
+        white-space: nowrap;
+        color: $red-color;
+        margin-bottom: 0;
+        span {
+          color: $dark-50-color;
+          font-weight: $fw-regular;
+          font-size: $description-font;
+          line-height: 24px;
+          text-decoration: line-through;
+        }
+      }
+    }
+    .facilities-list {
+      h4 {
+        font-size: $description-font;
+        line-height: 24px;
+        font-weight: $fw-medium;
+        color: $dark-color;
+        margin-bottom: 10px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          display: flex;
+          align-items: center;
+          font-size: $description-font;
+          line-height: 24px;
+          color: $dark-color;
+          margin-bottom: 10px;
+          i {
+            color: $red-color;
+          }
+        }
+      }
+    }
+  }
+}

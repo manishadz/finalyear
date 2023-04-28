@@ -1,30 +1,30 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-    <div class="container">
-        <h1>My Bidding list </h1>
-        <hr>
-
-
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ProductName</th>
-                    <th scope="col">BidAmount</th>
-                    <th scope="col">Timestamp</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($biddings as $bid)
+    <section class="guest-houses">
+        <div class="container-lg">
+            <h1>
+                Bidding List
+            </h1>
+            <table class="table mt-4">
+                <thead>
                     <tr>
-                        <th>{{ $bid->name }}</th>
-                        <th>Rs:{{ $bid->pivot->bidding_amount }}</th>
-                        <th>{{ $bid->pivot->created_at }}</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Bid Amount</th>
+                        <th scope="col">Timestamp</th>
                     </tr>
-                @endforeach
+                </thead>
+                <tbody>
+                    @foreach ($biddings as $bid)
+                        <tr>
+                            <th>{{ $bid->name }}</th>
+                            <th>Rs:{{ $bid->pivot->bidding_amount }}</th>
+                            <th>{{ $bid->pivot->created_at }}</th>
+                        </tr>
+                    @endforeach
 
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
+    </section>
 @endsection

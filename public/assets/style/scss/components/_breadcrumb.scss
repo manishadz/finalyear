@@ -1,0 +1,22 @@
+section.cus-breadcrumb {
+  background-color: $light-white-color;
+  padding: 20px 0;
+  .breadcrumb {
+    margin-bottom: 0;
+    .breadcrumb-item {
+      font-weight: $fw-regular;
+      font-size: $description-font;
+      line-height: 24px;
+
+      a {
+        color: $red-color;
+        &:hover {
+          color: $dark-red-color;
+        }
+      }
+      &.active {
+        color: $dark-50-color;
+      }
+    }
+  }
+}

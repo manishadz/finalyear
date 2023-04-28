@@ -1,0 +1,34 @@
+{
+  "authors": [
+    "Washington Botelho <wbotelhos@gmail.com> (https://www.wbotelhos.com)"
+  ],
+  "description": "Raty - A Star Rating Plugin",
+  "homepage": "https://github.com/wbotelhos/raty",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "spec",
+    "vendor"
+  ],
+  "keywords": [
+    "classificacao",
+    "classificar",
+    "javascript",
+    "library",
+    "plugin",
+    "rating",
+    "raty",
+    "star",
+    "staring",
+    "votar",
+    "voto"
+  ],
+  "license": "MIT",
+  "main": [
+    "src/raty.js",
+    "src/raty.css",
+    "src/fonts/*",
+    "src/images/*"
+  ],
+  "name": "raty"
+}

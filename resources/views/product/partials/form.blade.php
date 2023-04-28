@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col">
+    <div class="col form-group">
         <label for="">Product Name</label>
         <input type="text" class="form-control"  name="name" placeholder="Product Name" value="{{ $product->name ?? old('name')}}" required>
     </div>
-    <div class="col">
+    <div class="col form-group">
         <label for="">Company Name</label>
         <select class="form-control" name="company" id="company-select">
             <option value="">Select A Option</option>

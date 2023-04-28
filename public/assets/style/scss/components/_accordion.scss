@@ -1,0 +1,21 @@
+.cus-accordion {
+  .accordion-item {
+    border: none;
+    border-radius: 0;
+    .accordion-button {
+      background-color: $light-white-color;
+      border-radius: $web-border-radius;
+      margin-bottom: 10px;
+      box-shadow: none;
+      font-size: $description-font;
+      color: $red-color;
+      font-weight: $fw-regular;
+      &.collapsed {
+        color: $dark-color;
+      }
+    }
+    .accordion-body {
+      margin-bottom: 20px;
+    }
+  }
+}

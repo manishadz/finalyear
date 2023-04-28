@@ -1,0 +1,99 @@
+.customer__booking {
+    background-color: #f1f1f1;
+
+    &-box {
+        padding: 40px 0;
+
+        .form-control {
+            font-size: 14px;
+        }
+        .dropdown-filter{
+            button{
+                white-space: nowrap;
+                font-size: 14px;
+                background-color: rgb(240, 31, 59);
+                color: #fff;
+            }
+            .dropdown-menu{
+                .md-title{
+                    font-size: 16px
+                }
+            }
+        }
+
+        &-list {
+            .all-hotel-listing {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    background-color: #fff;
+                    margin-bottom: 20px;
+                    padding: 10px 10px;
+
+                    .hotel-image-box {
+                        width: 150px;
+                        height: 150px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                    .hotel-info{
+                        .name{
+                            font-size: 18px;
+                        }
+                        .location{
+                            font-size: 14px;
+                        }
+                        .price{
+                            span{
+                                font-size: 20px;
+                                font-weight: 700;
+
+                            }
+                            sub{
+                                font-size: 14px;
+                                color: $dark-50-color;
+                            }
+                        }
+
+                    }
+                    .booking-details{
+                        .approved-status{
+                            font-size: 12px;
+                            color: rgb(46, 218, 46);
+                            padding: 5px 10px;
+                            border-radius: 30px;
+                            background-color: rgba(16, 225, 16, 0.37);
+                        }
+                        .sm-title{
+                            font-size: 13px;
+                            color: $dark-50-color;
+                            white-space: nowrap;
+                            
+                        
+                        }
+                        .md-text{
+                            font-size: 16px;
+                        }
+                       
+                    }
+                    .list-hotel-dropdown{
+                       ul{
+                        li{
+                            padding: 0;
+                            margin: 0;
+                        }
+                       }
+                    }
+
+                }
+            }
+        }
+    }
+}

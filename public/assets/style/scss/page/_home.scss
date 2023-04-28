@@ -1,0 +1,83 @@
+section.hot-offers {
+  padding: 50px 0;
+
+  // margin-top: -200px;
+  .nav {
+    .nav-item {
+      .nav-link {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        border-radius: $web-border-radius;
+        color: $dark-color;
+        font-weight: $description-font;
+        line-height: 24px;
+        font-weight: $fw-regular;
+        background-color: white;
+        margin-left: 10px;
+        &.active {
+          color: white;
+          background-color: $red-color;
+        }
+      }
+    }
+  }
+}
+
+section.top-destination,
+section.guest-houses,
+section.blogs,
+section.cus-faqs {
+  padding: 50px 0;
+}
+section.subscription-suggest {
+  background-color: #f1f1f1;
+  padding: 50px 0;
+  h2 {
+    font-size: $title-font;
+    line-height: 38px;
+    font-weight: $fw-boldest;
+    color: $dark-color;
+    span {
+      color: $red-color;
+    }
+  }
+  p {
+    font-weight: $fw-regular;
+    font-size: $description-font;
+    color: $dark-color;
+  }
+  .subs-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .border-side {
+      border-left: 1px solid #dee2e6;
+    }
+    .icon-wrapper {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: $white-color;
+      color: $red-color;
+    }
+    p {
+      font-weight: $sm-description-font;
+      line-height: 21px;
+      font-weight: $fw-regular;
+      margin-bottom: 2px;
+    }
+    h5 {
+      font-weight: $description-font;
+      line-height: 24px;
+      font-weight: $fw-medium;
+      color: $red-color;
+    }
+  }
+}
