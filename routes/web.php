@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ChangePassword;
-use App\Http\Controllers\HomeController;
-
 use App\Http\Controllers\BiddingController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
@@ -18,19 +15,17 @@ Route::get('/samusng-series', [FrontendController::class, 'samsung'])->name('sam
 
 Route::get('/product-detail/{id}', [FrontendController::class, 'detail'])->name('product');
 
+Auth::routes(["verify" => true]);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     // Route::resource('/category', CategoryController::class);
     Route::resource('/products', ProductController::class);
 
     Route::resource('/biddings', BiddingController::class);
+
     Route::get('/change-password', [FrontendController::class, 'password'])->name('updateform');
     Route::post('/change-password', [FrontendController::class, 'changePassword'])->name('update-password');
 });
-
-// backend routes
-Auth::routes(["verify" => true]);
-
 
 //notification
 Route::get('/send', [Notification::class, 'sendNotification']);
