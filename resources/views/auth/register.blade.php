@@ -175,6 +175,7 @@
                                 Register with basic information
                             </p>
                         </div>
+                        @include('common.errors')
                         <form action="{{ route('register') }}" method="post" id="form" novalidate="novalidate">
                             @csrf
 

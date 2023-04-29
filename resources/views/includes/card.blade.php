@@ -16,7 +16,7 @@
         <div class="card-body mx-auto">
           <h5 class="card-title justify-content-between">{{ $product->name }}</h5>
           <p class="card-text ">
-          <h5 class="justify-content-between" style="color: rgba(33, 252, 124, 0.918)">Starts from NRS:{{ $product->min_price }}</h5>
+          <h5 class="justify-content-between" style="color: rgba(0, 88, 37, 0.527)">Starts from NRS:{{ $product->min_price }}</h5>
           </p>
           <a href="{{ route('product', $product->id) }}" class="btn btn-primary d-grid gap-3">See Details</a>
         </div>

@@ -13,10 +13,9 @@
                                     alt="photo of {{ $apple->image }}" />
                             </div>
                             <div class="room-info">
-                                <div class="price">NPR {{ $apple->min_price }} <span class="text-muted">to</span> NPR
-                                    {{ $apple->max_price }}</div>
-                                <h3 class="room-name">{{ $apple->name }}</h3>
-                                <p class="address">{{ $apple->end_time }}</p>
+                                <div class="price"style="color: rgba(0, 88, 37, 0.527)">Starts from NRS: {{ $apple->min_price }} </div>
+                                <h3 class="room-name ">{{ $apple->name }}</h3>
+                                <p> Ends In: <span class="text-danger">{{ $apple->end_time }}</span></p>
                             </div>
                         </a>
                     </div>

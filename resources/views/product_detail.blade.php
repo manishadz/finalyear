@@ -10,7 +10,7 @@
                             <div class="col-md-6">
                                 <div class="images p-3">
                                     <div class="text-center p-4 bg-image hover-zoom"> <img id="main-image"
-                                            src="{{ asset('uploads/product/' . $product->image) }}" width="450" /> </div>
+                                            src="{{ asset('uploads/product/' . $product->image) }}" width="450"  /> </div>
                                     {{-- <div class="thumbnail text-center"> <img onclick="change_image(this)"
                                             src="{{ asset('uploads/product/' . $product->image) }}" width="70"> <img
                                             onclick="change_image(this)"
@@ -23,12 +23,12 @@
                                             class="text-uppercase text-muted brand">{{ $product->category }}</span>
                                         <h5 class="text-uppercase">{{ $product->name }}</h5>
                                         <span class="fw-bolder ">NRS:</span> <span
-                                            class="p-5">{{ $product->min_price }}-{{ $product->max_price }}</span>
+                                            class="p-2">{{ $product->min_price }}-{{ $product->max_price }}</span>
 
                                     </div>
                                     <p class="about">{{ $product->description }}</p>
                                     <div class="sizes mt-5">
-                                        <h6 class="fw-bold ">Ends in:<span class="item p-5"
+                                        <h6 class="fw-bold ">Ends in:<span class="item p-2"
                                                 style="color: #ff0303">{{ $product->end_time }}</span></h6>
                                         <h6 class="fw-bold ">Highest bid:
                                             <span class="p-5">

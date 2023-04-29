@@ -6,7 +6,7 @@
                     <div class="vendor-info">
                         <a href="{{ url('/') }}" class="brand-logo">My Application</a>
                         <p>
-                           description
+                            Unlock the value in your old phone with our mobile auction site.
                         </p>
                     </div>
                 </div>
@@ -36,17 +36,17 @@
                         <div class="social-media">
                             <ul>
                                 <li>
-                                    <a href="https://facebook.com/motuvai" target="_blank">
+                                    <a href="https://facebook.com/manish_adz" target="_blank">
                                         <i class="bi bi-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/motuvai" target="_blank">
+                                    <a href="https://twitter.com/manish_adz" target="_blank">
                                         <i class="bi bi-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://instagram.com/motuvai" target="_blank">
+                                    <a href="https://instagram.com/manish_adz" target="_blank">
                                         <i class="bi bi-instagram"></i>
                                     </a>
                                 </li>
