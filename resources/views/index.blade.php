@@ -6,10 +6,10 @@
             <div class="col-12 mb-5">
                 <div class="col-md-8 mx-auto">
                     <h1 class="hero-title">
-                        Find the best deal in Nepal on our application</span>
+                        Find the best Mobile deal in Nepal on our application</span>
                     </h1>
                     <div class="hero-description text-white text-center mb-5">
-                        Enjoy the online booking features including last minute offer best prices booking history and much more from your dedicated account panel to manage your services.
+                        Unlock the value in your old phone with our mobile auction site.
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 <h2 class="primary-title">Explore our Apple Series</h2>
                 <a href="{{ route('apple') }}" class="view-all-btn" style="font-size: 16px; font-weight:bold; text-decoration:none; color:rgb(240, 31, 59)">View All</a>
             </div>
-               
+
                 <div class="three-card-slider">
                     @foreach ($apples as $apple)
                         <a href="{{ route('product', $apple->id) }}" class="room-card gap">
@@ -70,7 +70,7 @@
                 <h2 class="primary-title">Explore our Samsung Series</h2>
                 <a href="{{ route('samsung') }}" class="view-all-btn" style="font-size: 16px; font-weight:bold; text-decoration:none; color:rgb(240, 31, 59)">View All</a>
             </div>
-               
+
                 <div class="three-card-slider">
                     @foreach ($samsungs as $samsung)
                         <a href="{{ route('product', $samsung->id) }}" class="room-card gap">

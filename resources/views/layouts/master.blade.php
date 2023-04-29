@@ -33,7 +33,7 @@
     </button>
     @include('layouts.common.header')
     <main>
-        
+
         @yield('content')
 
         <section class="subscription-suggest">
@@ -42,12 +42,12 @@
                     <div class="col-lg-8 mx-auto">
                         <div class="text-center mb-4">
                             <h2 class="mb-3">
-                                We are providing best services so <span>subscribe</span> to get
+                                We are providing best services so <span>Contact</span> to get
                                 special discount!
                             </h2>
                             <p>
-                                Don’t wanna miss something ? Subscribe right now and get special
-                                discount and monthly newsletter
+                                Don’t wanna miss something ? Contact right now and get special
+                                discount!
                             </p>
                         </div>
                     </div>

@@ -18,21 +18,18 @@ Route::get('/samusng-series', [FrontendController::class, 'samsung'])->name('sam
 
 Route::get('/product-detail/{id}', [FrontendController::class, 'detail'])->name('product');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/change-password', [FrontendController::class, 'password'])->name('updateform');
-    Route::post('/change-password', [FrontendController::class, 'changePassword'])->name('update-password');
-});
 
-
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     // Route::resource('/category', CategoryController::class);
     Route::resource('/products', ProductController::class);
 
     Route::resource('/biddings', BiddingController::class);
+    Route::get('/change-password', [FrontendController::class, 'password'])->name('updateform');
+    Route::post('/change-password', [FrontendController::class, 'changePassword'])->name('update-password');
 });
 
 // backend routes
-Auth::routes();
+Auth::routes(["verify" => true]);
 
 
 //notification

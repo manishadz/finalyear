@@ -3,7 +3,7 @@
     <div class="mobile-top-header">
         <div class="container-lg">
             <div class="mobile-nav">
-                <a href="{{ url('/') }}" class="brand-logo"> Satkar Hotel </a>
+                <a href="{{ url('/') }}" class="brand-logo"> My Application </a>
                 <span class="open_modal_btn" data-bs-toggle="modal" data-bs-target="#search_room_modal">
                     <i class="bi bi-search"></i>
                 </span>

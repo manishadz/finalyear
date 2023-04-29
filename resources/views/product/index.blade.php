@@ -7,7 +7,7 @@
                 <div class="row mb-4">
                     <div class="col-sm-4">
                         <h4 class="xl-title fw-bold text-dark mb-4">
-                            MY BOOKING LIST
+                            MY Products LIST
                         </h4>
                     </div>
                     <div class="col-sm-8">

@@ -51,7 +51,7 @@ body {
   padding: 5px 0 5px 25px;
 }
 .input-wrapper .bordered-bottom.form-control:focus {
-  border-color: rgb(240, 31, 59);
+  border-color: rgb(255, 208, 0);
 }
 .input-wrapper i {
   position: absolute;
@@ -71,7 +71,7 @@ body {
   font-size: 16px;
 }
 .input-wrapper.solid label.lg a {
-  color: rgb(240, 31, 59);
+  color: rgb(255, 208, 0);
   font-weight: 600;
 }
 .input-wrapper.solid i {
@@ -92,10 +92,10 @@ body {
   line-height: 24px;
 }
 .input-wrapper .form-control:focus {
-  border-color: rgb(240, 31, 59);
+  border-color: rgb(255, 208, 0);
 }
 .input-wrapper .form-control.is-invalid {
-  border-color: rgb(240, 31, 59);
+  border-color: rgb(255, 208, 0);
   box-shadow: none;
 }
 .input-wrapper .sm-form-control {
@@ -197,7 +197,7 @@ input[type=number]::-webkit-inner-spin-button {
   right: 25%;
   position: absolute;
   border-radius: 5px;
-  background: rgb(240, 31, 59);
+  background: rgb(255, 208, 0);
 }
 
 .range-input {
@@ -244,16 +244,16 @@ input[type=range]::-moz-range-thumb {
   padding: 0 30px;
   font-weight: 600;
   font-size: 16px;
-  border: 1px solid rgb(240, 31, 59);
-  background-color: rgb(240, 31, 59);
+  border: 1px solid rgb(255, 208, 0);
+  background-color: rgb(255, 208, 0);
   color: white;
   border-radius: 4px;
   text-decoration: none;
   width: 100%;
 }
 .large-btn:hover {
-  background-color: rgb(153, 3, 23);
-  border: 1px solid rgb(153, 3, 23);
+  background-color: rgb(240, 31, 59);
+  border: 1px solid  rgb(240, 31, 59);
 }
 
 .primary-button {
@@ -262,17 +262,17 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(240, 31, 59);
+  background-color: rgb(255, 208, 0);
   color: white;
   font-size: 16px;
   font-weight: 600;
   border-radius: 4px;
   text-decoration: none;
-  border: 1px solid rgb(240, 31, 59);
+  border: 1px solid  rgb(255, 208, 0);
 }
 .primary-button:hover {
-  border-color: rgb(153, 3, 23);
-  background-color: rgb(153, 3, 23);
+  border-color: rgb(230, 10, 40);
+  background-color: rgb(230, 10, 40);
 }
 
 .primary-outline-button {
@@ -282,17 +282,17 @@ input[type=range]::-moz-range-thumb {
   align-items: center;
   justify-content: center;
   background-color: white;
-  color: rgb(240, 31, 59);
+  color:  rgb(255, 208, 0);
   font-size: 16px;
   font-weight: 600;
   border-radius: 4px;
   text-decoration: none;
-  border: 1px solid rgb(240, 31, 59);
+  border: 1px solid rgb(255, 208, 0);
 }
 .primary-outline-button:hover {
-  background-color: rgb(153, 3, 23);
+  background-color: rgb(230, 10, 40);
   color: white;
-  border-color: rgb(153, 3, 23);
+  border-color:  rgb(230, 10, 40);
 }
 
 .danger-button {
@@ -1762,7 +1762,7 @@ section.hero {
   padding: 50px 0 0 0;
   margin-bottom: 20px;
   background-color: rgb(241, 241, 241);
-  background-image: url(https://www.samhi.co.in/GIF/Hero-Header-Banner/hyatt-place-gurgaon.jpg);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBPVfFVqmIU6YC0lzjLo5skYzlgNsR83yhiA&usqp=CAU);
   background-size: cover;
   position: relative;
 }
@@ -1873,7 +1873,7 @@ section.hero .site-counterup .reg-suggest-info p {
 }
 .hotels-tab .content-wrapper {
   background-color: white;
-  border-top: 7px solid rgb(255, 182, 6);
+  border-top: 7px solid rgb(240, 31, 59);
   padding: 20px 30px;
 }
 .hotels-tab .content-wrapper label {
