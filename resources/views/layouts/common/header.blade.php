@@ -3,7 +3,7 @@
     <div class="mobile-top-header">
         <div class="container-lg">
             <div class="mobile-nav">
-                <a href="{{ url('/') }}" class="brand-logo"> My Application </a>
+                <a href="{{ url('/') }}" class="brand-logo"> Mobile Auction </a>
                 <span class="open_modal_btn" data-bs-toggle="modal" data-bs-target="#search_room_modal">
                     <i class="bi bi-search"></i>
                 </span>
@@ -54,10 +54,12 @@
         <div class="container-lg">
             <div class="row align-items-center justify-content-between">
                 <div class="col-3">
-                    <a href="{{ url('/') }}" class="brand-logo">My Application</a>
+                    <a href="{{ url('/') }}" class="brand-logo">Mobile Auction</a>
                 </div>
                 <div class="col-6">
                     <ul class="link-list">
+                        <li><a href="{{ route('product-sell.predict') }}">Sell Mobile</a></li>
+
                         <li><a href="{{ route('apple') }}">Iphone Series</a></li>
                         <li><a href="{{ route('samsung') }}">Samsung Series</a></li>
 

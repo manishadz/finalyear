@@ -29,35 +29,36 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+
+
+     public function create()
     {
-        $endpoint = 'http://127.0.0.1:9000/myapi';
-        // $response = Http::get($endpoint);
-        /**
-         * Curl use gar 
-         */
+        // $endpoint = 'http://127.0.0.1:9000/myapi';
 
-        $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-          CURLOPT_URL => $endpoint,
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => '',
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 0,
-          CURLOPT_FOLLOWLOCATION => true,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => 'GET',
-        ));
-        
-        $response = curl_exec($curl);
-        
-        curl_close($curl);
-        $response = json_decode($response);
-        
-        return view('product.create')->with(['data' => $response]);
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => $endpoint,
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => '',
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => 'GET',
+        // ));
+
+        // $response = curl_exec($curl);
+
+        // curl_close($curl);
+        // $response = json_decode($response);
+
+        return view('product.create');
     }
 
+
+   
     /**
      * Store a newly created resource in storage.
      *

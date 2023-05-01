@@ -51,12 +51,18 @@
         <textarea class="form-control" name="description" rows="3" placeholder="Product Description" required>{{ $product->description ?? old('description') }}</textarea>
     </div>
 </div>
+<div class="col">
+    <label for="">Mini-Price</label><br>
+    {{-- <button type="submit" class="btn btn-primary"></button> --}}
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Predict minimum Price</button>
 
+
+</div>
 <div class="row">
-    <div class="col">
+    {{-- <div class="col">
         <label for="">Mini-Price</label><br>
         <input type="number" class="form-control" name="min_price" value="{{isset($data->predicted_price) ? (int)$data->predicted_price : 1}}" placeholder="">
-    </div>
+    </div> --}}
 
 
     <div class="col">
@@ -88,4 +94,5 @@
         <button type="submit" class="btn btn-primary">Save</button>
     </div>
 </div>
+
 

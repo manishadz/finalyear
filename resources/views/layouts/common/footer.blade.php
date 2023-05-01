@@ -4,9 +4,10 @@
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <div class="vendor-info">
-                        <a href="{{ url('/') }}" class="brand-logo">My Application</a>
+                        <a href="{{ url('/') }}" class="brand-logo">Mobile Auction</a>
                         <p>
-                            Unlock the value in your old phone with our mobile auction site.
+                            Automated Pricing and Auctions for Used
+                            Mobile Phones.
                         </p>
                     </div>
                 </div>
@@ -61,7 +62,7 @@
         <div class="container-lg">
             <div class="d-flex align-items-center justify-content-center flex-wrap">
                 <p class="copyright-text pb-2 pb-sm-1">
-                    © My Application -  {{date('Y')}}   All rights reserved.
+                    © Mobile Auction -  {{date('Y')}}   All rights reserved.
                 </p>
             </div>
         </div>

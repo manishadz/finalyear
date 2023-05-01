@@ -21,7 +21,7 @@
                                     margin-top: 24px;"></i>
                                     <label class="form-label" for="email">{{ __('Email Address') }}</label>
                                     <input type="email" name="email" class="form-control" placeholder="your email"
-                                        value="{{ old('email') }}" required="" autocomplete="email">
+                                        value="{{ old('email') }}"  autocomplete="email">
                                 </div>
                             </div>
                             <div class="mb-4">
@@ -30,7 +30,7 @@
                                      margin-top: 24px;"></i>
                                     <label class="form-label" for="email">{{ __('password') }}</label>
                                     <input type="password" name="password" class="form-control" placeholder="your password"
-                                        required="" autocomplete="">
+                                         autocomplete="">
                                 </div>
                             </div>
                             <button type="submit" class="primary-button w-100 mb-3">{{ __('Login') }}</button>
