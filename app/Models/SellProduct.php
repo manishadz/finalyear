@@ -20,10 +20,15 @@ class SellProduct extends Model
         'pixel_height',
         'ram',
         'screen_height',
-        'screen_weight',
+        'screen_width',
         'talk_time',
         'pixel_height',
         'touch_screen',
+        'pixel_width',
+        'wifi',
+        'camera_pixel',
+        'mobile_weight',
+
 
     ];
 }

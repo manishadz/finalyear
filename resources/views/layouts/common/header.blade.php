@@ -31,17 +31,17 @@
                 <div class="left-part">
                     <ul>
                         <li>
-                            <a href="https://facebook.com/motuvai" target="_blank">
+                            <a href="https://facebook.com/" target="_blank">
                                 <i class="bi bi-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/motuvai" target="_blank">
+                            <a href="https://twitter.com/" target="_blank">
                                 <i class="bi bi-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com/motuvai" target="_blank">
+                            <a href="https://instagram.com/" target="_blank">
                                 <i class="bi bi-instagram"></i>
                             </a>
                         </li>

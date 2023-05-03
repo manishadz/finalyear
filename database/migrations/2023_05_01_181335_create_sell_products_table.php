@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('battery_power');
             $table->boolean('bluetooth');
-            $table->integer('clock_speed');
+            $table->double('clock_speed');
             $table->boolean('dual_sim');
             $table->integer('frontcamera');
             $table->boolean('4g');
@@ -27,10 +27,15 @@ return new class extends Migration
             $table->integer('pixel_height');
             $table->integer('ram');
             $table->integer('screen_height');
-            $table->integer('screen_weight');
+            $table->integer('screen_width');
             $table->integer('talk_time');
             $table->integer('pixel_height');
             $table->boolean('touch_screen');
+            $table->boolean('pixel_width');
+            $table->boolean('wifi');
+            $table->integer('mobile_depth');
+            $table->boolean('camera_pixel');
+            $table->boolean('3g');
 
 
             $table->timestamps();

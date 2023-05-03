@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('model');
             $table->text('description');
             $table->string('condition');
-            $table->integer('age');
+            $table->integer('age')->nullable();
             $table->bigInteger('min_price');
             $table->bigInteger('max_price');
             $table->timestamp('end_time')->date_format('l jS \of F Y h:i:s a');
