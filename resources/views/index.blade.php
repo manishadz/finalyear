@@ -17,18 +17,18 @@
         <section class="hotels-tab pt-5">
             <div class="container-lg">
                 <div class="content-wrapper">
-                    <form action="http://satkaronline.test/search" method="get">
+                    <form action="{{ route('search') }}" method="get">
                         <div class="row align-items-end">
                             <div class="col-12  col-lg-10">
                                 <div class="position-relative">
                                     <div class="input-wrapper solid">
                                         <i class="bi bi-phone"></i>
-                                        <input type="text" name="destination" id="destination" class="form-control" placeholder="What are you looking for?">
+                                        <input type="text" name="search" class="form-control" placeholder="What are you looking for?">
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <button class="large-btn">
+                                <button type="submit" class="large-btn">
                                     <i class="bi bi-search me-3"></i> Search
                                 </button>
                             </div>
@@ -50,7 +50,7 @@
                     @foreach ($apples as $apple)
                         <a href="{{ route('product', $apple->id) }}" class="room-card gap">
                             <div class="room-image">
-                                <img src="{{ asset('uploads/product/'.$apple->image)}}"
+                                <img src="{{ get_image_url('uploads', $apple->image)}}"
                                     alt="photo of {{$apple->image}}" />
                             </div>
                             <div class="room-info">
@@ -75,7 +75,7 @@
                     @foreach ($samsungs as $samsung)
                         <a href="{{ route('product', $samsung->id) }}" class="room-card gap">
                             <div class="room-image">
-                                <img src="{{ asset('uploads/product/'.$samsung->image)}}"
+                                <img src="{{ get_image_url('uploads', $samsung->image)}}"
                                     alt="photo of {{$samsung->image}}" />
                             </div>
                             <div class="room-info">

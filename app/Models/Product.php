@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\ProductCondition;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
@@ -22,5 +23,10 @@ class Product extends Model
     public function users()
     {
         return $this->belongsToMany(User::class)->withPivot('bidding_amount', 'is_closed')->withTimestamps();
+    }
+
+    public function condition()
+    {
+        return $this->hasOne(ProductCondition::class);
     }
 }

@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-6">
                     <ul class="link-list">
-                        <li><a href="{{ route('product-sell.predict') }}">Sell Mobile</a></li>
+                        <li><a href="{{ route('product-sell.condition') }}">Sell Mobile</a></li>
 
                         <li><a href="{{ route('apple') }}">Iphone Series</a></li>
                         <li><a href="{{ route('samsung') }}">Samsung Series</a></li>

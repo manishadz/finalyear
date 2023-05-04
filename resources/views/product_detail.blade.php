@@ -10,7 +10,7 @@
                             <div class="col-md-6">
                                 <div class="images p-3">
                                     <div class="text-center p-4 bg-image hover-zoom"> <img id="main-image"
-                                            src="{{ asset('uploads/product/' . $product->image) }}" width="450"  /> </div>
+                                            src="{{ get_image_url('product', $product->image) }}" width="450"  /> </div>
                                     {{-- <div class="thumbnail text-center"> <img onclick="change_image(this)"
                                             src="{{ asset('uploads/product/' . $product->image) }}" width="70"> <img
                                             onclick="change_image(this)"

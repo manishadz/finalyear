@@ -9,7 +9,7 @@
                     <div class="col-12 col-md-6 col-xl-4 mb-4">
                         <a href="{{ route('product', $samsung->id) }}" class="room-card gap d-block">
                             <div class="room-image">
-                                <img src="{{ asset('uploads/product/' . $samsung->image) }}"
+                                <img src="{{ get_image_url('product', $samsung->image) }}"
                                     alt="photo of {{ $samsung->image }}" />
                             </div>
                             <div class="room-info">

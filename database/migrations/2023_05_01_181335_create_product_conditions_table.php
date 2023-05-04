@@ -15,29 +15,27 @@ return new class extends Migration
     {
         Schema::create('sell_products', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained('products');
             $table->integer('battery_power');
-            $table->boolean('bluetooth');
+            $table->boolean('blue');
             $table->double('clock_speed');
             $table->boolean('dual_sim');
-            $table->integer('frontcamera');
-            $table->boolean('4g');
-            $table->integer('internal_memory');
-            $table->integer('mobile_weight');
-            $table->integer('number_of_cores');
-            $table->integer('pixel_height');
+            $table->integer('fc');
+            $table->boolean('four_g');
+            $table->integer('int_memory');
+            $table->integer('mobile_wt');
+            $table->integer('n_cores');
             $table->integer('ram');
-            $table->integer('screen_height');
-            $table->integer('screen_width');
+            $table->integer('sc_h');
+            $table->integer('sc_w');
             $table->integer('talk_time');
-            $table->integer('pixel_height');
+            $table->integer('px_height');
             $table->boolean('touch_screen');
-            $table->boolean('pixel_width');
+            $table->boolean('px_width');
             $table->boolean('wifi');
-            $table->integer('mobile_depth');
-            $table->boolean('camera_pixel');
-            $table->boolean('3g');
-
-
+            $table->integer('m_dep');
+            $table->boolean('pc');
+            $table->boolean('three_g');
             $table->timestamps();
         });
     }
