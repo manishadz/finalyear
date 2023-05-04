@@ -59,7 +59,7 @@ class DecisionTreeClassifier:
 
     def predict(self, X):
         X = np.array(X)
-        if self.feature is None:
+        if self.feature is None or self.classes is not None:
             # If this node is a leaf, return the most common class
             return np.array([self.classes[np.argmax(self.class_counts)]] * len(X))
         left_mask = X[:, self.feature] <= self.threshold
@@ -264,12 +264,14 @@ dt = DecisionTreeClassifier()
 
 
 app = Flask(__name__)
-model = DecisionTreeClassifier()
+model = DecisionTreeClassifier(max_depth=3, min_samples_split=10)
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
-    X = np.array(data['data'])
+    # X = np.array(list(data['data'].values())).reshape(1, -1)
+    X =  [np.array([842,0,2.2,0,1,0,7,0.6,188,2,2,20,756,2549,9,7,19,0,0,1])]
+    print(data['data'].values())
     y_pred = model.predict(X)
     return jsonify({'prediction': y_pred.tolist()})
 
