@@ -89,3 +89,7 @@
 <div class="modal-footer">
     <button type="submit" class="btn btn-primary">Save</button>
 </div>
+
+@if (Session::has("prediction"))
+<h2>{{ Session::get("prediction")}}</h2>
+@endif

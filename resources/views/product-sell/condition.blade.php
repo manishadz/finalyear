@@ -28,7 +28,7 @@
                             @include('common.errors')
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-12">
-                                    <form action="{{ route('product-sell.condition.store') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ url('/predict') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         @include('product-sell.partials.condition-form')
                                     </form>
