@@ -1,4 +1,4 @@
-<form>
+<form action="{{ url('/predict') }}" method="POST">
     <div class="row">
         <div class="mb-3 col">
             <label for="battery_power" class="col-form-label">Battery Power:</label>
@@ -130,6 +130,6 @@
         </select>
     </div>
     <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Find</button>
+        <button type="submit" class="btn btn-primary">Predict</button>
     </div>
 </form>

@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-with open('/media/mundre/Backup/finalyear/python-script/decision_tree1.pkl', 'rb') as file:
+with open('/media/mundre/Backup/finalyear/python-script/decisionTreeFinal.pkl', 'rb') as file:
         dt = pickle.load(file)
 @app.route('/predict', methods=['POST'])
 def predict():
