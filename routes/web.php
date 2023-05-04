@@ -23,6 +23,7 @@ Auth::routes(["verify" => true]);
 Route::middleware(['auth', 'verified'])->group(function () {
     // Route::resource('/category', CategoryController::class);
     Route::resource('/products', ProductController::class);
+    Route::post('/products/{id}/status', [ProductController::class, 'status'])->name('products.status');
 
     Route::get('/product-sell/condition', [ProductSellController::class,'condition'])->name('product-sell.condition');
     Route::post('/product-sell/codition', [ProductSellController::class,'conditionStore'])->name('product-sell.condition.store');

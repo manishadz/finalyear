@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sell_products', function (Blueprint $table) {
+        Schema::create('product_conditions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained('products');
             $table->integer('battery_power');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->boolean('dual_sim');
             $table->integer('fc');
             $table->boolean('four_g');
-            $table->integer('int_memory');
+            $table->integer('int_memory')->nullable();
             $table->integer('mobile_wt');
             $table->integer('n_cores');
             $table->integer('ram');
@@ -47,6 +47,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sell_products');
+        Schema::dropIfExists('product_conditions');
     }
 };

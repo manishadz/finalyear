@@ -20,6 +20,7 @@
                         </div>
                     </div>
                 </div>
+                @include('common.flash-message')
                 <div class="customer__booking-box-list">
                     <ul class="m-0 p-0 all-hotel-listing list-style-type-none light-border-bottom-list list">
                         @foreach ($products as $product)
@@ -70,8 +71,17 @@
                                     <div class=" col-2 col-md-2 booking-details">
                                         <div class="text-start">
                                             <span class="approved-status">
-                                                {{ @$product->users[$key]->pivot->bidding_amount }}
+                                                {{ @$product->users[$key]->pivot->bidding_amount ?? 'NA' }}
                                             </span>
+                                            @if ($product->is_active)
+                                            <span class="badge badge-pill bg-success">
+                                                Active
+                                            </span>
+                                            @else
+                                            <span class="badge badge-pill bg-danger">
+                                                In Active
+                                            </span>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-2 col-md-2">
@@ -82,6 +92,23 @@
                                                         src="{{ asset('assets/images/menu/menu (1).png') }}" alt="menu-btn"
                                                         data-bs-toggle="dropdown">
                                                     <ul class="dropdown-menu shadow-lg">
+                                                        @if (auth()->id() == 1)
+                                                        <li>
+                                                            <form action="{{ route('products.status', $product->id) }}"
+                                                                method="post" onclick="return confirm('Are you sure?')">
+                                                                @csrf
+                                                                @if ($product->is_active)
+                                                                <button type="submit"
+                                                                class="dropdown-item booking-edit"><span
+                                                                    class="bi bi-bag-x"></span> Cancel</button>
+                                                                @else
+                                                                <button type="submit"
+                                                                class="dropdown-item booking-edit"><span
+                                                                    class="bi bi-bag-check"></span> Approve</button>
+                                                                @endif
+                                                            </form>
+                                                        </li>
+                                                        @endif
                                                         <li>
                                                             <a href="{{ route('products.edit', $product->id) }}"
                                                                 class="dropdown-item"><span class="bi bi-pencil"></span>

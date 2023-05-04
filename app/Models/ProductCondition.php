@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProductCondtion extends Model
+class ProductCondition extends Model
 {
     protected $fillable = [
         'battery_power',
@@ -30,4 +30,9 @@ class ProductCondtion extends Model
         'three_g',
         'product_id'
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

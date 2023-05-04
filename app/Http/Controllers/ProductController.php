@@ -17,9 +17,15 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with(['users' => function ($query) {
-            $query->orderBy('bidding_amount', 'desc');
-        }])->where('user_id', auth()->id())->get();
+        if (auth()->id() == 1) {
+            $products = Product::with(['users' => function ($query) {
+                $query->orderBy('bidding_amount', 'desc');
+            }])->get();
+        } else {
+            $products = Product::with(['users' => function ($query) {
+                $query->orderBy('bidding_amount', 'desc');
+            }])->where('user_id', auth()->id())->get();
+        }
 
         return view('product.index', compact('products'));
     }
@@ -155,6 +161,27 @@ class ProductController extends Controller
 
         if ($success) {
             session()->flash('success', 'product deleted successfully');
+        } else {
+            session()->flash('error', 'something went wrong.');
+        }
+
+        return redirect()->route('products.index');
+    }
+
+    /**
+     * toggle is_active value of the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function status($id)
+    {
+        $product = Product::find($id);
+        $product->is_active = !$product->is_active;
+        $success = $product->save();
+
+        if ($success) {
+            session()->flash('success', 'product status changed');
         } else {
             session()->flash('error', 'something went wrong.');
         }

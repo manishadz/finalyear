@@ -95,7 +95,8 @@
                                         <a class="dropdown-item" href="/products">
                                             <span class="icon">
                                                 <i class="bi bi-phone"></i>
-                                            </span>My Products
+                                            </span>
+                                            {{ (auth()->id() == 1) ? 'All Products' : 'My Products'}}
                                         </a>
                                     </li>
                                     <li>

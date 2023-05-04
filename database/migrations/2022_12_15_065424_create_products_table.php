@@ -19,12 +19,12 @@ return new class extends Migration
             $table->string('company');
             $table->string('model');
             $table->text('description');
-            $table->string('condition');
+            $table->string('condition')->nullable();
             $table->integer('age')->nullable();
             $table->bigInteger('min_price');
             $table->bigInteger('max_price');
             $table->timestamp('end_time')->date_format('l jS \of F Y h:i:s a');
-            $table->boolean('is_active')->default(true);
+            $table->boolean('is_active')->default(false);
             $table->string('image')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
