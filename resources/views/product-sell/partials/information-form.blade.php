@@ -86,8 +86,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col">
-        <button type="submit" class="btn btn-primary">Save</button>
-    </div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Save</button>
 </div>
