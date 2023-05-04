@@ -26,7 +26,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/products/{id}/status', [ProductController::class, 'status'])->name('products.status');
 
     Route::get('/product-sell/condition', [ProductSellController::class,'condition'])->name('product-sell.condition');
-    Route::post('/product-sell/codition', [ProductSellController::class,'conditionStore'])->name('product-sell.condition.store');
+    Route::post('/predict', [ProductSellController::class,'conditionStore'])->name('product-sell.condition.store');
     Route::get('/product-sell/information', [ProductSellController::class,'information'])->name('product-sell.information');
     Route::post('/product-sell/information', [ProductSellController::class,'informationStore'])->name('product-sell.information.store');
 

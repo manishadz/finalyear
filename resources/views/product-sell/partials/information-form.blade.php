@@ -59,7 +59,7 @@
     <div class="col form-group">
         <label for="min_price" class="default mb-2">Mininum price</label><br>
         <input type="number" class="form-control" name="min_price" id="min_price" placeholder="Maximum Price"
-            value="{{ $product->min_price ?? old('min_price') }}" required>
+            value="{{ session("predictionvalue") ?? old('min_price') }}" required>
     </div>
 
     <div class="col form-group">
@@ -89,7 +89,10 @@
 <div class="modal-footer">
     <button type="submit" class="btn btn-primary">Save</button>
 </div>
-
+{{--
 @if (Session::has("prediction"))
 <h2>{{ Session::get("prediction")}}</h2>
 @endif
+@if (Session::has("predictionvalue"))
+<h2>{{ Session::get("predictionvalue")}}</h2>
+@endif --}}

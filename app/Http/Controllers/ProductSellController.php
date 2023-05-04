@@ -55,16 +55,17 @@ class ProductSellController extends Controller
             'http://127.0.0.1:9000/predict',
             $data
 
-
         );
         // dd($data);
 
         // return back()->with(["prediction"=>($response->body())]);
         $prediction = json_decode($response->getBody())->prediction;
         // dd($prediction[0]);
-        return back()->with(["prediction" => $prediction[0]]);
+        // return back()->with(["prediction" => $prediction[0]]);
 
-
+        session()->put('__prediction', $prediction[0]);
+        $retVal = (session("__prediction")==0) ? rand(200,1000) : session("__prediction") ;
+        session()->put("predictionvalue",$retVal);
 
 
         $data = $request->validated();
@@ -83,6 +84,13 @@ class ProductSellController extends Controller
     {
         // get product information from form
         $data = $request->all();
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extenstion;
+            $file->move('uploads/product/', $filename);
+            $data['image'] = $filename;
+        }
         $data['user_id'] = auth()->id();
 
         $product = Product::create($data);
@@ -93,6 +101,7 @@ class ProductSellController extends Controller
             $product->condition()->create($condition);
         }
         session()->flash('success', 'product added successfully');
+        session()->forget(['__condition', '__prediction','predictionvalue']);
         return to_route('products.index');
     }
 }

@@ -41,3 +41,31 @@
         </div>
     </div>
 @endsection
+
+
+@push('scripts')
+<script>
+    // Get the select elements
+    const companySelect = document.getElementById('company-select');
+    const phoneModelSelect = document.getElementById('phone_model');
+
+    // Add an event listener to the company select element
+    companySelect.addEventListener('change', function() {
+        // Get the selected company value
+        const selectedCompany = companySelect.value;
+
+        // Loop through the phone model options
+        for (let i = 0; i < phoneModelSelect.options.length; i++) {
+            const option = phoneModelSelect.options[i];
+            const company = option.dataset.company;
+
+            // If the company matches the selected company, show the option
+            if (company === selectedCompany) {
+                option.style.display = '';
+            } else {
+                option.style.display = 'none';
+            }
+        }
+    });
+</script>
+@endpush
